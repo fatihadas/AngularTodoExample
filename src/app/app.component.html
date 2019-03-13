@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Todo Uygulaması</h1>
+  <div class="list-group">
+    <a [class]="item.Completed==true ? 'list-group-item list-group-item-success' : 'list-group-item list-group-item-danger'"
+      *ngFor="let item of ItemList" (click)="todoComplate(item)">{{item.ItemName}}
+    <button (click)="delete(item)">X</button></a>
+  </div>
+  <div class="list-group">
+    <a class="list-group-item"><input type="text" class="form-control" [(ngModel)]="Item.ItemName"></a>
+    <a class="list-group-item"><button class="btn btn-success" (click)="AddItem()">Add Item</button></a>
+  </div>
+  
+ 
+</div>
